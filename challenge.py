@@ -1,49 +1,51 @@
-print("Digite o seu nome: ")
-name = input() # Pedindo o nome do usuário.
+# artes, parques, museus, pontos históricos, comércios, comida, hotéis e esportes
+error = "<ERRO> Digite um número que esteja na lista!"
 
-if name != "": # Veirficando se o usuário digitou o nome.
+print("Bem vindo ao PathFinder!\nDigite o seu nome: ")
+name = input()
 
-    print(f"\nOlá, {name} como vai? Gostaria de apresentar uma solução inovadora que pode trazer grandes benefícios para a cidade de São Paulo, tanto para seus moradores quanto para os turistas que visitam a cidade. Estou falando da plataforma digital PathFinder, que tem como objetivo facilitar o turismo e o entretenimento na cidade, gerando diversas opções de trajetos turísticos e de entretenimento para seus usuários. Gostaria de saber mais sobre a plataforma? (Sim/Não)")
+print(f"Olá {name}! Seja bem vindo ao PathFinder.")
 
-    question = input().upper() # Pegando a resposta do usuário.
+print("""
+Qual tipo de turismo você gostaria de fazer?
+1 - Artes
+2 - Parques
+3 - Museus
+4 - Pontos Históricos
+5 - Comércios
+6 - Comida
+7 - Hotéis
+9 - Esportes
 
-    if question != "": # Verificando se o usuário digitou algo.
+Digite o número correspondente ao tipo de turismo:
+""")
 
-        if question == "S" or question == "SIM": # Verificando se o usuário digitou SIM ou S.
+quest = int(input())
 
-            print("\nO PathFinder é uma ferramenta que atende a uma necessidade cada vez mais presente na sociedade, que é a falta de tempo e disposição para planejar um roteiro turístico completo e seguro. Com a plataforma, os usuários podem explorar o potencial turístico da cidade de São Paulo de forma mais eficiente e segura, garantindo uma experiência satisfatória e confortável.")
+if quest >= 1 and quest <= 9:
+    print("""
+    Onde você está localizado ?
+    1 - Centro
+    2 - Zona Sul
+    3 - Zona Norte
+    4 - Zona Oeste
+    5 - Zona Leste
+    """)
+    location = int(input())
 
-            print("\nEstamos buscando investidores que acreditam na ideia e desejam fazer parte desse projeto inovador. Acreditamos que essa plataforma pode ter um grande potencial de crescimento e sucesso, considerando a demanda cada vez maior por soluções tecnológicas para o turismo e entretenimento.")
-
-            print("\nAlém disso, é importante ressaltar que a plataforma também pode contribuir para a economia local, atraindo mais turistas para a cidade de São Paulo e gerando mais empregos no setor de turismo e entretenimento.")
-
-            print("\nEnfim, essa é uma oportunidade única de investimento em uma ideia inovadora que pode trazer benefícios para a cidade de São Paulo e para toda a sociedade. O que acha de se tornar um dos investidores do PathFinder e fazer parte dessa história de sucesso? (Sim/Não)")
-
-            question = input().upper() # Pegando a resposta do usuário.
-
-            if question == "S" or question == "SIM": # Verificando se o usuário digitou S ou SIM.
-
-                print(f"\nPerfeito {name}! Digite o seu email para receber novas atualizações sobre o projeto!")
-
-                email = input() # Pegando o email do usuário.
-
-                if email != "": # Verificando se o usuário digitou alog.
-
-                    print("\nIremos te contatar em breve!")
-
-        elif  question == "NÃO" or question == "NAO" or question == "N": # Caso o usuário digitou NÃO ou N.
-
-            print(f"\nOkay {name}, programa encerrado! Até mais!")
-        
-        else: # Caso o usuário não digitou NÃO, N, NAO, SIM ou S.
-
-            print("<ERRO> digite SIM ou NÃO")
-
-    else: # Caso o usuário digitou algo diferente de SIM ou NÃO.
-
-        print("<ERRO> digite SIM ou NÃO")
-
-else: # Caso o usuário não digitou o nome.
-
-    print("\n<ERRO> Digite o seu nome!")
-    print("Fim do programa!")
+    match location:
+        case 1:
+            print("")
+        case 2:
+            print("")
+        case 3:
+            print("")
+        case 4:
+            print("")
+        case 5:
+            print("")
+        case _:
+            print(error)
+    
+else:
+    print(error)
