@@ -21,4 +21,4 @@
 
 <p>Ainda sobre o transporte, o projeto visará uma parceria com outras empresas, como a Uber, a fim de oferecer aos nossos clientes serviços de transporte privado para a viagem.</p>
 
-<p>Por fim, o PathFinder terá a opção de tradutor, quebrando a barreira linguística que os visitantes estrangeiros podem possuir quanto ao português.</p>
+<p>O PathFinder terá também a opção de tradutor, quebrando a barreira linguística que os visitantes estrangeiros podem possuir quanto ao português. Por fim, o projeto tem em mente a previsão do tempo para a elaboração das rotas, garantindo que as melhores datas sejam durante tempos propícios para a viagem do cliente.</p>
