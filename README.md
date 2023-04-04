@@ -1,13 +1,24 @@
-# Dado dos alunos
+<h1>Projeto PathFinder</h1>
+<h2>Dado dos alunos</h2>
 
-RM98297 - Lucas Pisaneschi Speranzini
-RM97937 - Pedro Henrique Fernandes Lô de Barros
-RM99279 - João Paulo Fonseca Zamperlini
-RM97824 – Vinicius Oliveira de Barros
-RM99499 – Guilherme Monteiro Espim
+<ul>
+    <li>RM99499 - Guilherme Monteiro Espim</li>
+    <li>RM99279 - João Paulo Fonseca Zamperlini</li>
+    <li>RM98297 - Lucas Pisaneschi Speranzini</li>
+    <li>RM97937 - Pedro Henrique Fernandes Lô de Barros</li>
+    <li>RM97824 - Vinicius Oliveira de Barros</li>
+</ul>
 
-# Sobre a Plataforma Path Finder
+<h2>Sobre a Plataforma Path Finder</h2>
 
-O PathFinder é uma ferramenta que atende a uma necessidade cada vez mais presente na sociedade, que é a falta de tempo e disposição para planejar um roteiro turístico completo e seguro. Com a plataforma, os usuários podem explorar o potencial turístico da cidade de São Paulo de forma mais eficiente e segura, garantindo uma experiência satisfatória e confortável.
+<p>O PathFinder é uma ferramenta que atende a uma necessidade cada vez mais presente na sociedade, que é a falta de tempo e disposição para planejar um roteiro turístico completo e seguro. Com a plataforma, os usuários podem explorar o potencial turístico da cidade de São Paulo de forma mais eficiente e segura, garantindo uma experiência satisfatória e confortável.</p>
 
-Além disso, é importante ressaltar que a plataforma também pode contribuir para a economia local, atraindo mais turistas para a cidade e gerando mais empregos no setor de turismo e entretenimento.
+<p>Além disso, é importante ressaltar que a plataforma também pode contribuir para a economia local, atraindo mais turistas para a cidade e gerando mais empregos no setor de turismo e entretenimento.</p>
+
+<p>A ideia do aplicativo é gerar uma opção de uma rota para passeio turístico pela cidade, de tal forma que o usuário não precise se dar ao trabalho de elaborar ponto por ponto a sua viagem, proporcionando a ele uma economia de tempo e trabalho. Além disso, este projeto também visa os turístas que não conhecem muito bem a cidade, facilitando o processo de pesquisar sobre pontos de turismo e entretenimento.</p>
+
+<p>Um outro ponto que o PathFinder preza é a segurança e flexibilidade no transporte dos seus usuários. O aplicativo notificará o viajante de locais perigosos a serem evitados na cidade e também quanto a regiões engafarradas, recomendando alternativas para diminuir o impacto do transito local.</p>
+
+<p>Ainda sobre o transporte, o projeto visará uma parceria com outras empresas, como a Uber, a fim de oferecer aos nossos clientes serviços de transporte privado para a viagem.</p>
+
+<p>Por fim, o PathFinder terá a opção de tradutor, quebrando a barreira linguística que os visitantes estrangeiros podem possuir quanto ao português.</p>
