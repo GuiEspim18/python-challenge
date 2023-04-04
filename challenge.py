@@ -4,48 +4,50 @@ error = "<ERRO> Digite um número que esteja na lista!"
 print("Bem vindo ao PathFinder!\nDigite o seu nome: ")
 name = input()
 
-print(f"Olá {name}! Seja bem vindo ao PathFinder.")
+print(f"Olá {name}! ")
 
-print("""
+escolha_usuario = int(input("""
 Qual tipo de turismo você gostaria de fazer?
-1 - Artes
-2 - Parques
-3 - Museus
-4 - Pontos Históricos
-5 - Comércios
-6 - Comida
-7 - Hotéis
-9 - Esportes
+
+1- Cultural ->  museus, galerias de arte, teatros e outros locais para conhecer a história e a cultura da cidade.
+2- Histórico -> monumentos, prédios antigos, sítios arqueológicos e outros locais para aprender sobre a história da cidade.
+3- Natureza ->  parques, reservas naturais, trilhas ecológicas e outros locais para apreciar a natureza e os ecossistemas da cidade.
+4- Comércios -> shoppings, feiras, lojas de artesanato e outros locais para comprar produtos típicos da cidade.
+5- Gastronomia -> restaurantes, mercados e feiras para experimentar a culinária local.
+6- Esportes ->  arenas esportivas, estádios e outros locais para assistir ou praticar esportes na cidade.
 
 Digite o número correspondente ao tipo de turismo:
-""")
+"""))
 
-quest = int(input())
 
-if quest >= 1 and quest <= 9:
-    print("""
-    Onde você está localizado ?
-    1 - Centro
-    2 - Zona Sul
-    3 - Zona Norte
-    4 - Zona Oeste
-    5 - Zona Leste
-    """)
-    location = int(input())
+if escolha_usuario >= 1 and escolha_usuario <= 8:
+    tempo = int(input("Quanto tempo você tem disponível em horas?"))
 
-    match location:
-        case 1:
-            print("")
-        case 2:
-            print("")
-        case 3:
-            print("")
-        case 4:
-            print("")
-        case 5:
-            print("")
-        case _:
-            print(error)
+
+        
+   
+    if tempo >= 1 and tempo <= 10:
+        print(f"Tendo em vista os dados de {name}, em {tempo} horas, relacionado ao tema {locais}")
+
+        
+
+
+
+
+    
     
 else:
     print(error)
+
+
+
+
+ # print("""
+    # Onde você está localizado ?
+    # 1 - Centro
+    # 2 - Zona Sul
+    # 3 - Zona Norte
+    # 4 - Zona Oeste
+    # 5 - Zona Leste
+    # """)
+    #location = int(input())
