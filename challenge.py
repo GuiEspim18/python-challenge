@@ -22,7 +22,6 @@ Digite o número correspondente ao tipo de turismo:
 
 if escolha_usuario >= 1 and escolha_usuario <= 6:
 
-
     local1 = ""
     local2 = ""
     recomendacao1 = random.randint(1, 3)
