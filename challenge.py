@@ -79,6 +79,8 @@ if escolha_usuario >= 1 and escolha_usuario <= 8:
                 local = "Allianz Parque"
             elif aleatorio == 3:
                 local = "Museu do Futebol"
+        case _:
+            print(error)
     
     print(f"De acordo com as suas imporfações o ponto turístico que recomendamos é {local}")
     
