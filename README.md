@@ -11,7 +11,7 @@
 
 <h2>Sobre a Plataforma Path Finder</h2>
 
-<p>O PathFinder é uma ferramenta que atende a uma necessidade cada vez mais presente na sociedade, que é ter   tempo e disposição para planejar um roteiro turístico completo e seguro. Com a plataforma, os usuários podem explorar o potencial turístico da cidade de São Paulo de forma mais eficiente e segura, garantindo uma experiência satisfatória e confortável.</p>
+<p>O PathFinder é uma ferramenta que atende a uma necessidade cada vez mais presente na sociedade, que é ter tempo e disposição para planejar um roteiro turístico completo e seguro. Com a plataforma, os usuários podem explorar o potencial turístico da cidade de São Paulo de forma mais eficiente e segura, garantindo uma experiência satisfatória e confortável.</p>
 
 <p>Além disso, é importante ressaltar que a plataforma também pode contribuir para a economia local, atraindo mais turistas para a cidade e gerando mais empregos no setor de turismo e entretenimento.</p>
 
