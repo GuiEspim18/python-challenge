@@ -5,24 +5,26 @@ error = "<ERRO> Digite um número que esteja na lista!"
 print("Bem vindo ao PathFinder!\nDigite o seu nome: ")
 name = input()
 
-print(f"Olá {name}! ")
+print(f"Olá, {name}!")
 
 escolha_usuario = int(input("""
 Qual tipo de turismo você gostaria de fazer?
 
-1- Cultural ->  museus, galerias de arte, teatros e outros locais para conhecer a história e a cultura da cidade.
-2- Histórico -> monumentos, prédios antigos, sítios arqueológicos e outros locais para aprender sobre a história da cidade.
-3- Ambiental ->  parques, reservas naturais, trilhas ecológicas e outros locais para apreciar a natureza e os ecossistemas da cidade.
-4- Comercial -> shoppings, feiras, lojas de artesanato e outros locais para comprar produtos típicos da cidade.
-5- Gastronômico -> restaurantes, mercados e feiras para experimentar a culinária local.
-6- Esportivo ->  arenas esportivas, estádios e outros locais para assistir ou praticar esportes na cidade.
+1- Cultural ->  Museus, galerias de arte, teatros e outros locais para conhecer a história e a cultura da cidade.
+2- Histórico -> Monumentos, prédios antigos, sítios arqueológicos e outros locais para aprender sobre a história da cidade.
+3- Ambiental ->  Parques, reservas naturais, trilhas ecológicas e outros locais para apreciar a natureza e os ecossistemas da cidade.
+4- Comercial -> Shoppings, feiras, lojas de artesanato e outros locais para comprar produtos típicos da cidade.
+5- Gastronômico -> Restaurantes, mercados e feiras para experimentar a culinária local.
+6- Esportivo ->  Arenas esportivas, estádios e outros locais para assistir ou praticar esportes na cidade.
 
 Digite o número correspondente ao tipo de turismo:
 """))
 
 if escolha_usuario >= 1 and escolha_usuario <= 6:
-    # tempo = int(input("Quanto tempo você tem disponível em horas?")
-    local = ""
+
+
+    local1 = ""
+    local2 = ""
     recomendacao1 = random.randint(1, 3)
     recomendacao2 = random.randint(4, 6)
 
@@ -30,71 +32,81 @@ if escolha_usuario >= 1 and escolha_usuario <= 6:
         case 1:
             tema = "Cultural"
 
-            if recomendacao1 == 1 and recomendacao2 == 4:
+            if (recomendacao1 == 1 or 2 or 3) and recomendacao2 == 4:
                 local1 = "MASP"
                 local2 = "Pinacoteca"
-            elif recomendacao1 == 1 and recomendacao2 == 5:
-                local = "Theatro de São Paulo"
+            elif (recomendacao1 == 1 or 2 or 3) and recomendacao2 == 5:
+                local1 = "Theatro de São Paulo"
                 local2 = "MASP"
-            elif recomendacao1 == 1 and recomendacao2 == 6:
-                local = "Theatro de São Paulo"
+            elif (recomendacao1 == 1 or 2 or 3) and recomendacao2 == 6:
+                local1 = "Theatro de São Paulo"
                 local2 = "Pinacoteca"
             
         case 2:
             tema = "Histórico"
 
-            if recomendacao1 == 1 and recomendacao2 == 4:
+            if (recomendacao1 == 1 or 2 or 3) and recomendacao2 == 4:
                 local1 = "Pátio do Colégio"
                 local2 = "Museu do Ipiranga"
-            elif recomendacao1 == 1 and recomendacao2 == 5:
-                local = "Mosteiro de São Bento"
+            elif (recomendacao1 == 1 or 2 or 3) and recomendacao2 == 5:
+                local1 = "Mosteiro de São Bento"
                 local2 = "Museu do Ipiranga"
-            elif recomendacao1 == 1 and recomendacao2 == 6:
-                local = "Theatro de São Paulo"
-                local2 = "Pinacoteca"
-
+            elif (recomendacao1 == 1 or 2 or 3) and recomendacao2 == 6:
+                local1 = "Pátio do Colégio"
+                local2 = "Mosteiro de São Bento"
         
         case 3:
             tema = "Ambiental"
-            recomendacao = random.randint(1, 3)
 
-            if recomendacao == 1:
-                local = "Parque do Ibirapuera"
-            elif recomendacao == 2:
-                local = "Jardim Botânico de São Paulo"
-            else: 
-                local = "Horto Florestal"
+            if (recomendacao1 == 1 or 2 or 3) and recomendacao2 == 4:
+                local1 = "Parque do Ibirapuera"
+                local2 = "Jardim Botânico de São Paulo"
+            elif (recomendacao1 == 1 or 2 or 3) and recomendacao2 == 5:
+                local1 = "Horto Florestal"
+                local2 = "Jardim Botânico de São Paulo"
+            elif (recomendacao1 == 1 or 2 or 3) and recomendacao2 == 6:
+                local1 = "Parque do Ibirapuera"
+                local2 = "Horto Florestal"
+
         case 4:
-            tema = "Comércio"
-            recomendacao = random.randint(1, 3)
+            tema = "Comércial"
 
-            if recomendacao == 1:
-                local = "Rua 25 de Março"
-            elif recomendacao == 2:
-                local = "Galeria do Rock"
-            else:
-                local = "Shopping Iguatemi"    
+            if recomendacao1 == 1 and (recomendacao2 == 4 or 5 or 6):
+                local1 = "Rua 25 de Março"
+                local2 = "Galeria do Rock"
+            elif recomendacao1 == 2 and (recomendacao2 == 4 or 5 or 6):
+                local1 = "Shopping Iguatemi"
+                local2 = "Rua 25 de Março"
+            elif recomendacao1 == 3 and (recomendacao2 == 4 or 5 or 6):
+                local1 = "Galeria do Rock"
+                local2 = "Shopping Iguatemi"
+
         case 5:
             tema = "Gastronômico"
-            recomendacao = random.randint(1, 3)
 
-            if recomendacao == 1:
-                local = "Fábrica da Bauducco"
-            elif recomendacao == 2:
-                local = "Feira da Liberdade"
-            else:
-                local = "Restaurante Figueira Rubaiyat"
+            if recomendacao1 == 1 and (recomendacao2 == 4 or 5 or 6):
+                local1 = "Fábrica da Bauducco"
+                local2 = "Feira da Liberdade"
+            elif recomendacao1 == 2 and (recomendacao2 == 4 or 5 or 6):
+                local1 = "Restaurante Figueira Rubaiyat"
+                local2 = "Fábrica da Bauducco"
+            elif recomendacao1 == 3 and (recomendacao2 == 4 or 5 or 6):
+                local1 = "Feira da Liberdade"
+                local2 = "Restaurante Figueira Rubaiyat"
+
         case 6:
             tema = "Esportivo"
 
-            recomendacao = random.randint(1, 3)
+            if recomendacao1 == 1 and (recomendacao2 == 4 or 5 or 6):
+                local1 = "Estádio do Morumbi"
+                local2 = "Allianz Parque"
+            elif recomendacao1 == 2 and (recomendacao2 == 4 or 5 or 6):
+                local1 = "Museu do Futebol"
+                local2 = "Estádio do Morumbi"
+            elif recomendacao1 == 3 and (recomendacao2 == 4 or 5 or 6):
+                local1 = "Allianz Parque"
+                local2 = "Museu do Futebol"
 
-            if recomendacao == 1:
-                local = "Estádio do Morumbi"
-            elif recomendacao == 2:
-                local = "Allianz Parque"
-            else:
-                local = "Museu do Futebol"
         case _:
             print(error)
 
@@ -116,27 +128,7 @@ if escolha_usuario >= 1 and escolha_usuario <= 6:
         case 4:
             transporte = "A pé"
 
-
-
-    
-    print(f"De acordo com as suas informações, o tipo de turismo escolhido é {tema}, o seu transporte será {transporte} e o trajeto que recomendamos é {local}")
+    print(f"De acordo com as suas informações\n-O tipo de turismo escolhido é: {tema}\n-O seu transporte será: {transporte}\n-O trajeto que recomendamos é: {local1} -> {local2}")
     
 else:
     print(error)
-
-
-
-
-# print("""
-    # Onde você está localizado ?
-    # 1 - Centro
-    # 2 - Zona Sul
-    # 3 - Zona Norte
-    # 4 - Zona Oeste
-    # 5 - Zona Leste
-    # """)
-    #location = int(input())
-
-   
-# if tempo >= 1 and tempo <= 10:
-#     print(f"Tendo em vista os dados de {name}, em {tempo} horas, relacionado ao tema {escolha_usuario}")
