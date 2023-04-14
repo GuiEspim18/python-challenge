@@ -115,6 +115,8 @@ if escolha_usuario >= 1 and escolha_usuario <= 6:
     2 - Metrô
     3 - Ônibus
     4 - A pé
+
+Digite o número correspondente ao meio de transporte:
     """))
 
     match transporte: 
