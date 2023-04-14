@@ -5,7 +5,7 @@ Pedro Henrique Fernandes Lô de Barros
 Vinicius Oliveira de Barros
 
 
-Sobre a Plataforma Path Finder
+# Sobre a Plataforma Path Finder
 
 O PathFinder é uma ferramenta que atende a uma necessidade cada vez mais presente na sociedade, que é ter tempo e disposição para planejar um roteiro turístico completo e seguro. 
 Com a plataforma, os usuários podem explorar o potencial turístico da cidade de São Paulo de forma mais eficiente e segura, garantindo uma experiência satisfatória e confortável.
