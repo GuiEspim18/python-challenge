@@ -12,9 +12,11 @@ while True: # +/- tudo que esta dando true ele vai indo
 
     print("Bem vindo(a) ao Path-Finder!")  #mensagens iniciais
     nome = input(("Digite seu nome:\n")) #input dos user
-    
+   
     try:
         if re.match("^[a-zA-Z]+$", nome):
+
+
             #Verificando se o nome possui apenas letras de a-z ou A-Z até o final
             nome = nome.title() #Padroniza o formato do nome
             print(f"Olá, {nome}")
