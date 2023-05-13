@@ -1,11 +1,8 @@
-#Vini - 13/05 - começando - 02:34am
-#VIni - 13/05 - terminando - 04:46am
-#Só testando umas paradas, caso alguem entre no repositorio ja dei os push
 #Qualquer coisa só apagar
 import re
 import random
 from time import sleep
-from termcolor import colored #deixa o ngc colorido no terminal
+from termcolor import colored #deixa os erros colorido no terminal
 
 while True: # +/- tudo que esta dando true ele vai indo 
 
@@ -21,7 +18,7 @@ while True: # +/- tudo que esta dando true ele vai indo
             #Verificando se o nome possui apenas letras de a-z ou A-Z até o final
             nome = nome.title() #Padroniza o formato do nome
             print(f"Olá, {nome}")
-            break # o break que eu e o pedro fomos praticamente forçados a usar
+            break # O break que eu e o pedro fomos praticamente forçados a usar
             #Esse break ele acaba com a vida do loop e faz o código seguir o caminho dele
 
         else:#Aqui caso a busca do regex tenha achado algum numero, 
@@ -48,9 +45,10 @@ Qual tipo de turismo você gostaria de fazer, {nome} ?
 Digite o número correspondente ao tipo de turismo:\n
 """))
 
-        #Comecei a definir o erro direto no if
+
+
         if escolha_usuario < 1 or escolha_usuario > 6:
-            raise ValueError(colored("Escolha uma das alternativas apresentada (1 a 6)", "red"))
+            raise ValueError(colored("(ERRO)Escolha uma das alternativas apresentadas (1 a 6)", "red"))
             #caso contrario ele vai joga o código lá pro except e vai voltar pro while
             #Não tem nenhum break por enquanto pois só quero sair do loop
             #E partir para a proxima verificação usando o break quando essa estiver completa
@@ -159,7 +157,8 @@ Digite o número correspondente ao meio de transporte:\n"""))
         if transporte < 1 or transporte > 4:
             raise ValueError(colored("Meio de transporte inválido", "red"))
         else:
-            print(colored(f"{nome}, {turismoRecomendado}\nEspero que você goste e tenha um ótimo dia de diverção", "green"))
+            print(colored(f"{nome}, {turismoRecomendado}\nEspero que você goste e tenha um ótimo dia de diversão", "green"))
             break
-    except ValueError:
-        print("Nunca fiquei tão feliz com um erro")
+    except ValueError as erro:
+        print(erro)
+        
