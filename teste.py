@@ -1,4 +1,5 @@
-#Vini- 13/05 - 02:34
+#Vini - 13/05 - começando - 02:34am
+#VIni - 13/05 - terminando - 04:46am
 #Só testando umas paradas, caso alguem entre no repositorio ja dei os push
 #Qualquer coisa só apagar
 import re
