@@ -1,13 +1,9 @@
 #Qualquer coisa só apagar
 import re
 import random
-from time import sleep
 from termcolor import colored #deixa os erros colorido no terminal
 
 while True: # +/- tudo que esta dando true ele vai indo 
-
-    sleep(1) #dorme 1 seg pq tava muito rapido pra mim
-
     print("Bem vindo(a) ao Path-Finder!")  #mensagens iniciais
     nome = input(("Digite seu nome:\n")) #input dos user
    
@@ -27,7 +23,6 @@ while True: # +/- tudo que esta dando true ele vai indo
     
     #Aqui vai exibir a mensagem definida na linha de cima com o raise e o ValueErros
     except ValueError as erro:
-        sleep(2) #Da uma dormida que tava muito rápido
         print(erro)
 
 while True: # Repeti o processo de cima basicamente só que nas alternativas de turismo
@@ -143,7 +138,6 @@ Digite o número correspondente ao tipo de turismo:\n
             #evitei mas creio que minha lógica esta fazendo o uso perfeito dele
     
     except ValueError as erro:
-        sleep(2)
         print(erro)
 
 while True:
