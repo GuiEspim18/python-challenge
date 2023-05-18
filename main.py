@@ -2,12 +2,10 @@
 import re
 import random
 
-
 #loop para validar o nome
 while True: 
-
-    print("Bem vindo(a) ao Path-Finder!")  #mensagens iniciais
-    nome = input(("Digite seu nome:\n")) #input dos user
+    print("Bem vindo(a) ao Path-Finder!")  
+    nome = input(("Digite seu nome:\n")) 
    
     try:
         if re.match(r"[a-zA-Z]", nome):
@@ -134,6 +132,7 @@ Digite o número correspondente ao tipo de turismo:\n
     
     except ValueError as erro:
         print(erro)
+
 #Validação da escolha dos transportes
 while True:
     try:
@@ -142,12 +141,24 @@ while True:
 2 - Metrô
 3 - Ônibus
 4 - A pé
+5 - Carro pessoal
 Digite o número correspondente ao meio de transporte:\n"""))
-        if transporte < 1 or transporte > 4:
+        if transporte < 1 or transporte > 5:
             raise ValueError("Meio de transporte inválido")
         
         else:
-            print(f"{nome}, {turismoRecomendado}\nEspero que você goste e tenha um ótimo dia de diversão")
+            match transporte:
+                case 1:
+                    transporte_escolhido = 'Uber'
+                case 2:
+                    transporte_escolhido = 'Metrô'
+                case 3:
+                    transporte_escolhido = 'Ônibus'
+                case 4:
+                    transporte_escolhido = 'A pé'
+                case 5:
+                    transporte_escolhido = 'Carro pessoal'
+            print(f"{nome}, {turismoRecomendado}, você irá de {transporte_escolhido}\nEspero que você goste e tenha um ótimo dia de diversão")
             break
     except ValueError as erro:
         print(erro)
