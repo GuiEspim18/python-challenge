@@ -1,36 +1,29 @@
-#Qualquer coisa só apagar
+#Importando módulos
 import re
 import random
-from time import sleep
-from termcolor import colored #deixa os erros colorido no terminal
 
-while True: # +/- tudo que esta dando true ele vai indo 
 
-    sleep(1) #dorme 1 seg pq tava muito rapido pra mim
+#loop para validar o nome
+while True: 
 
     print("Bem vindo(a) ao Path-Finder!")  #mensagens iniciais
     nome = input(("Digite seu nome:\n")) #input dos user
    
     try:
-        if re.match("^[a-zA-Z]+$", nome):
-
-
-            #Verificando se o nome possui apenas letras de a-z ou A-Z até o final
+        if re.match(r"[a-zA-Z]", nome):
             nome = nome.title() #Padroniza o formato do nome
             print(f"Olá, {nome}")
-            break # O break que eu e o pedro fomos praticamente forçados a usar
-            #Esse break ele acaba com a vida do loop e faz o código seguir o caminho dele
+            break 
 
-        else:#Aqui caso a busca do regex tenha achado algum numero, 
-        #ele vai entrar nesse else, onde vai mostrar o erro e pular pro except
-            raise ValueError(colored("(ERRO)Nome Inválido. Digite apenas letras", "red"))
+        else:
+            raise ValueError("(ERRO)Nome Inválido. Digite apenas letras")
     
-    #Aqui vai exibir a mensagem definida na linha de cima com o raise e o ValueErros
+   
     except ValueError as erro:
-        sleep(2) #Da uma dormida que tava muito rápido
         print(erro)
 
-while True: # Repeti o processo de cima basicamente só que nas alternativas de turismo
+#Valida a escolha de opção dos turismos
+while True:
     try:
         escolha_usuario = int(input(f"""
 Qual tipo de turismo você gostaria de fazer, {nome} ?
@@ -48,11 +41,9 @@ Digite o número correspondente ao tipo de turismo:\n
 
 
         if escolha_usuario < 1 or escolha_usuario > 6:
-            raise ValueError(colored("(ERRO)Escolha uma das alternativas apresentadas (1 a 6)", "red"))
-            #caso contrario ele vai joga o código lá pro except e vai voltar pro while
-            #Não tem nenhum break por enquanto pois só quero sair do loop
-            #E partir para a proxima verificação usando o break quando essa estiver completa
+            raise ValueError("(ERRO)Escolha uma das alternativas apresentadas (1 a 6)")
         
+        #Faz as recomendações
         else:
             local1 = ""
             local2 = ""
@@ -139,13 +130,11 @@ Digite o número correspondente ao tipo de turismo:\n
                         local2 = "Museu do Futebol"
             
             turismoRecomendado = f"O tema escolhido foi: {tema}\nOs locais recomendados foram: {local1} e {local2}"
-            break #E aqui surge o uso do segundo break, 
-            #evitei mas creio que minha lógica esta fazendo o uso perfeito dele
+            break
     
     except ValueError as erro:
-        sleep(2)
         print(erro)
-
+#Validação da escolha dos transportes
 while True:
     try:
         transporte = int(input(f"""Qual meio de transporte você quer escolher, {nome} ?
@@ -155,9 +144,10 @@ while True:
 4 - A pé
 Digite o número correspondente ao meio de transporte:\n"""))
         if transporte < 1 or transporte > 4:
-            raise ValueError(colored("Meio de transporte inválido", "red"))
+            raise ValueError("Meio de transporte inválido")
+        
         else:
-            print(colored(f"{nome}, {turismoRecomendado}\nEspero que você goste e tenha um ótimo dia de diversão", "green"))
+            print(f"{nome}, {turismoRecomendado}\nEspero que você goste e tenha um ótimo dia de diversão")
             break
     except ValueError as erro:
         print(erro)
