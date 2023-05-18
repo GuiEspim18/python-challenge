@@ -8,7 +8,7 @@ while True:
     nome = input(("Digite seu nome:\n")) 
    
     try:
-        if re.match(r"[a-zA-Z]", nome):
+        if re.match(r"^[a-zA-Z]+$", nome):
             nome = nome.title() #Padroniza o formato do nome
             print(f"Olá, {nome}")
             break 
@@ -158,7 +158,7 @@ Digite o número correspondente ao meio de transporte:\n"""))
                     transporte_escolhido = 'A pé'
                 case 5:
                     transporte_escolhido = 'Carro pessoal'
-            print(f"{nome}, {turismoRecomendado}, você irá de {transporte_escolhido}\nEspero que você goste e tenha um ótimo dia de diversão")
+            print(f"{nome}, {turismoRecomendado}\nvocê irá de: {transporte_escolhido}\nEspero que você goste e tenha um ótimo dia de diversão")
             break
     except ValueError as erro:
         print(erro)
